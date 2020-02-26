@@ -9,11 +9,11 @@ CREATE TABLE department(
 );
 
 insert into department (name) values
-("sewing"),
-("patching"),
-("design"),
-("finance"),
-("accounting");
+("Transportation"),
+("Warehouse"),
+("Admin"),
+("Inventory"),
+("Purchasing");
 
 
 CREATE TABLE role(
@@ -26,15 +26,15 @@ CREATE TABLE role(
 
 insert into role(department_id, title, salary)
 values
-(1, "sewer", 30000),
-(1, "chief sewer", 50000),
-(2, "patcher", 20000),
-(3, "chief designer", 40000),
-(3, "designer", 25000),
-(4, "CFO", 250000),
-(4, "analyst", 25000),
-(5, "accountant", 60000),
-(5, "junior accountant", 40000);
+(2, "Stocker", 40000),
+(1, "Lumper", 36000),
+(4, "Inventory control", 45000),
+(1, "Loader", 45000),
+(2, "Selector", 38000),
+(2, "Full Case", 450000),
+(2, "Freezer selector", 46000),
+(3, "Supervisor", 55000),
+(3, "Lead", 49000);
 
 
 
@@ -49,9 +49,13 @@ CREATE TABLE employee(
 
 insert into employee(first_name, last_name, role_id, manager_id)
 values
-("Brett", "Sevy", 3, 4),
-("Chance", "Payne", 2, 3),
-("Chris", "Christensen", 5, 4),
-("Henry", "Jerman", 4, 5),
-("Sara", "Sevy", 2, 1),
-("Vivian", "Sevy", 1, 1);
+("Diana", "Mancillias", 3, 2),
+("Chance", "Payne", 3, 1),
+("Mike", "Walker", 2, 2),
+("Henry", "Jerman", 3, 1),
+("Kenny", "Freeman", 2, 2),
+("Cristin", "Mayo", 2, 1),
+("Albert", "Franco", 2, 2),
+("Reuben", "Mendoza", 1, 2),
+("Joe", "Sanchez", 4, 2),
+("Tiwarren", "Crockett", 1, 4);
