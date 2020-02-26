@@ -121,15 +121,28 @@ function addEmployee() {
             },
             {
                 type: "input",
-                name: "manader_id",
-                message: "What is the employees mamanger id number?",
+                name: "manager_id",
+                message: "What is the employees, mamanger id number?",
             },
 
         ])
-
-    return start();
-
+        
+		.then(function(answer) {
+			console.log(answer);
+            var newfirst_name = answer.first_name;
+            let newlast_name = answer.last_name;
+            let newrole_id = answer.role_id;
+            let newmanager_id = answer.manager_id;
+	
+			var query = "INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ?";
+			connection.query(query, [[[newfirst_name, newlast_name, newrole_id, newmanager_id]]], function(err, res) {
+            });
+            start();
+		});
 };
+
+
+
 
 function removeEmployee() {
     console.log("delete employee")
